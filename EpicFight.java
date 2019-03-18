@@ -3,40 +3,41 @@ import java.io.*;
 import java.lang.*;
 
 public class EpicFight{	
-	/*
-												Input Specification
-						The first line of input will contain 1 integer, t(1 ≤t≤120), representing the time the fight took in seconds.
-		
-		The next line contains 2 integers, mx and sx(1 ≤mx≤10, 10 ≤sx≤100), representing the number of moves Xorvier knows and his maximum stamina.
-				The next mx lines describes Xorvier's moves. The i-th line contains 2 integers, ai and bi,(-100 ≤ai≤100,-100 ≤bi≤100)
-						representing Xorvier's initial stamina cost and Ruffus's ending stamina reduction, respectively.
-		
-		The next line contains 2 integers, mr and sr(1 ≤mr≤10, 10 ≤sr≤100), representing the number of moves Ruffusknows and his maximum stamina. 
-				The next mr lines describes Ruffus's moves. The i-th line contains 2 integers, ai and bi, (-100 ≤ai≤100,-100 ≤bi≤100)
-					representingRuffus's initial stamina cost and Xorvier's ending stamina reduction, respectively.
-					
-												Output Specification
-		The first and only line of output should containthe remainder of the number of distinct possible fight sequences when divided by 10,007. (mod10007)
-	*/
-	/*
-		Modular arithmetic:  if b is the real answer, our program should output  a such that : 
-			b mod(10007)=  a
-		but if b is product of 2 numbers, then b can be factored in the following way:
-			b = c * d
-		then we can use our modular properties to get
-			b mod(10007)=  a  =  c mod(10007) *   d mod(10007)
-		similarly we can add a constant  in the following way:
-			(b + k) mod(10007)=  (a + k) mod(10007)
-	*/
+/*
+										Input Specification
+				The first line of input will contain 1 integer, t(1 ≤t≤120), representing the time the fight took in seconds.
+
+The next line contains 2 integers, mx and sx(1 ≤mx≤10, 10 ≤sx≤100), representing the number of moves Xorvier knows and his maximum stamina.
+		The next mx lines describes Xorvier's moves. The i-th line contains 2 integers, ai and bi,(-100 ≤ai≤100,-100 ≤bi≤100)
+				representing Xorvier's initial stamina cost and Ruffus's ending stamina reduction, respectively.
+
+The next line contains 2 integers, mr and sr(1 ≤mr≤10, 10 ≤sr≤100), representing the number of moves Ruffusknows and his maximum stamina. 
+		The next mr lines describes Ruffus's moves. The i-th line contains 2 integers, ai and bi, (-100 ≤ai≤100,-100 ≤bi≤100)
+			representingRuffus's initial stamina cost and Xorvier's ending stamina reduction, respectively.
+
+
+										Output Specification
+The first and only line of output should containthe remainder of the number of distinct possible fight sequences when divided by 10,007. (mod10007)
+*/
+/*
+	Modular arithmetic:  if b is the real answer, our program should output  a such that : 
+		b mod(10007)=  a
+	but if b is product of 2 numbers, then b can be factored in the following way:
+		b = c * d
+	then we can use our modular properties to get
+		b mod(10007)=  a  =  c mod(10007) *   d mod(10007)
+	similarly we can add a constant  in the following way:
+		(b + k) mod(10007)=  (a + k) mod(10007)
+*/
 
 	
-    public static int time; //time
-    public static int numXorMoves;
-    public static int numRufMoves;
-    public static int xorStamina;
-    public static int rufStamina;
-    public static int xorvier; //To keep track of Xorviers index
-    public static int ruffus; //To keep track of Ruffus index
+	public static int time; //time
+	public static int numXorMoves;
+	public static int numRufMoves;
+	public static int xorStamina;
+	public static int rufStamina;
+	public static int xorvier; //To keep track of Xorviers index
+	public static int ruffus; //To keep track of Ruffus index
 	public static int[] xorMovesCost;
 	public static int[] xorMovesDamage;
 	public static int[] rufMovesCost;
