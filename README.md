@@ -1,4 +1,4 @@
-# Epic-FIght
+# Epic-Fight
 
 For a Full explanation of what this program should do, please read "Epic_Fight_ps.pdf"
 
